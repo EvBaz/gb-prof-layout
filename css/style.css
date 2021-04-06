@@ -334,6 +334,11 @@ body {
   color: #FFFFFF;
 }
 
+.overlay-btn-img {
+  padding: 11px;
+  fill: #FFFFFF;
+}
+
 .overlay-btn:hover {
   color: #F16D7F;
   background-color: #FFFFFF;
@@ -345,11 +350,6 @@ body {
   fill: #F16D7F;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.overlay-btn-img {
-  padding: 11px;
-  fill: #FFFFFF;
 }
 
 .product:hover .overlay {
@@ -624,7 +624,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 13px 13px 0;
-  width: 296px;
+  width: 31.5%;
 }
 
 .sort-name {
@@ -632,10 +632,10 @@ body {
   font-weight: 400;
   line-height: 17px;
   color: #6F6E6E;
+  position: relative;
 }
 
-.sort-name[open] {
-  display: block;
+.sort-name-filter {
   position: absolute;
   z-index: 1;
   background-color: #FFFFFF;
@@ -655,6 +655,7 @@ body {
           flex-direction: column;
   text-align: left;
   width: 79px;
+  margin: 0;
 }
 
 .checkbox {
@@ -862,8 +863,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 60%;
+  width: 63%;
   margin: 65px 0 48px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
 }
 
 .product-about-btn {
@@ -1076,6 +1080,31 @@ summary::-webkit-details-marker {
   margin-top: 20px;
   border: 1px solid #A4A4A4;
   padding: 13px 0 16px 17px;
+  font-size: 16px;
+}
+
+.shipping-adr-input::-webkit-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.shipping-adr-input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.shipping-adr-input::-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.shipping-adr-input::placeholder {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
@@ -1204,21 +1233,71 @@ summary::-webkit-details-marker {
 .reg-form-input {
   border: 1px solid #A4A4A4;
   padding: 13px 0 16px 17px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.reg-form-input::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
-  margin-bottom: 20px;
+}
+
+.reg-form-input:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.reg-form-input::-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.reg-form-input::placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
 }
 
 .reg-form-input__pass {
   border: 1px solid #A4A4A4;
   padding: 13px 0 16px 17px;
+  font-size: 16px;
+  margin-bottom: 15;
+}
+
+.reg-form-input__pass::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
-  margin-bottom: 15;
+}
+
+.reg-form-input__pass:-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.reg-form-input__pass::-ms-input-placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.reg-form-input__pass::placeholder {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
 }
 
 .reg-form-pass-req {
@@ -1255,10 +1334,10 @@ summary::-webkit-details-marker {
 }
 
 .reg-form-btn {
+  border: 1px solid transparent;
   margin: 0;
   background-color: #F16D7F;
   color: white;
-  border: none;
   padding: 16px 29px;
   font-weight: 300;
   font-size: 16px;
