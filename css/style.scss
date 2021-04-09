@@ -1192,13 +1192,16 @@ summary::-webkit-details-marker {
 
 .flayout-content {
     padding: 7px 9px 11px;
-    width: 100%;
     display: none;
     position: absolute;
     z-index: 1;
     border: none;
     background-color: #FFFFFF;
     box-shadow: $box-shadow;
+
+    &__trending {
+        width: 100%;
+    }
 }
 
 .flayout-container:hover .flayout-content {
