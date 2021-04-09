@@ -52,7 +52,9 @@
 
         <main>
             <section class="breadcrump promo center">
-                <p><span class="breadcrump-header">NEW ARRIVALS</span></p>
+                <div class="breadcrump-header-block">
+                    <p><span class="breadcrump-header">NEW ARRIVALS</span></p>
+                </div>
                 <div class="breadcrump-paths">
                     <ul class="breadcrump-paths-list">
                         <a href="#" class="breadcrump-link">HOME</a> /
@@ -66,8 +68,9 @@
                 <div class="catalog-header">
                     <div>
                         <details class="filter">
-                            <summary class="filter-header">FILTER <svg class="filter-icon" width="15" height="10"
-                                    viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <summary class="filter-header-block"><span class="filter-header">FILTER</span><svg
+                                    class="filter-icon" width="15" height="10" viewBox="0 0 15 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
                                 </svg></summary>
@@ -98,107 +101,108 @@
                     <div class="sort">
 
                         <div class="sort-type">
-                            <details class="sort-block">
-                                <summary class="sort-title">TRENDING NOW <img class="arrow-bottom"
-                                        src="img/icon-arrow-bottom.svg" alt="arrow">
-                                </summary>
+                            <div class="flayout-container">
 
-                                <div class="sort-block__trend">
-                                    <div action="#" class="sort-block__filter">
+                                <button class="flayout-btn">
+                                    <span>TRENDING NOW</span>
+                                    <svg class="arrow-bottom" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                                            fill="#6F6E6E" />
+                                    </svg>
+                                </button>
 
+                                <div class="flayout-content">
+                                    <div action="#" class="sort-block__filter sort-trend">
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="trend-1" class="sort-block__input" type="checkbox">
-                                            </div>
-                                            <label for="trend-1"><span class="checkbox-text">Lorem.</span></label>
+                                            <input id="trend-1" class="sort-block__input" type="checkbox">
+                                            <label for="trend-1"><span class="checkbox-text">Lorem,
+                                                    ipsum.</span></label>
                                         </div>
 
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="trend-2" class="sort-block__input" type="checkbox">
-                                            </div>
+                                            <input id="trend-2" class="sort-block__input" type="checkbox">
                                             <label for="trend-2"><span class="checkbox-text">Lorem.</span></label>
                                         </div>
 
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="trend-3" class="sort-block__input" type="checkbox">
-                                            </div>
+                                            <input id="trend-3" class="sort-block__input" type="checkbox">
                                             <label for="trend-3"><span class="checkbox-text">Lorem.</span></label>
                                         </div>
-
                                     </div>
                                 </div>
 
-                            </details>
+                            </div>
                         </div>
 
                         <div class="sort-type">
-                            <details class="sort-block">
-                                <summary class="sort-title">SIZE <img class="arrow-bottom"
-                                        src="img/icon-arrow-bottom.svg" alt="arrow">
-                                </summary>
+                            <div class="flayout-container">
+                                <button class="flayout-btn">
+                                    <span>SIZE</span>
+                                    <svg class="arrow-bottom" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                                            fill="#6F6E6E" />
+                                    </svg>
+                                </button>
 
-                                <div class="sort-block__size">
-                                    <div action="#" class="sort-block__filter">
-
+                                <div class="flayout-content">
+                                    <div class="sort-block__filter sort-size">
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="size-xs" class="sort-block__input" type="checkbox">
-                                            </div>
-                                            <label for="size-xs"><span class="checkbox-text">XS</span></label>
+                                            <input class="sort-block__input" id="size-xs" type="checkbox">
+                                            <label class="checkbox-text" for="size-xs">XS</label>
                                         </div>
 
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="size-s" class="sort-block__input" type="checkbox">
-                                            </div>
-                                            <label for="size-s"><span class="checkbox-text">S</span></label>
+                                            <input class="sort-block__input" id="size-s" type="checkbox">
+                                            <label for="size-s" class="checkbox-text">S</label>
                                         </div>
 
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="size-m" class="sort-block__input" type="checkbox">
-                                            </div>
-                                            <label for="size-m"><span class="checkbox-text">M</span></label>
+                                            <input class="sort-block__input" id="size-m" type="checkbox">
+                                            <label for="size-m" class="checkbox-text">M</label>
                                         </div>
 
                                         <div class="sort-block__checkbox">
-                                            <div>
-                                                <input id="size-l" class="sort-block__input" type="checkbox">
-                                            </div>
-                                            <label for="size-l"><span class="checkbox-text">L</span></label>
+                                            <input class="sort-block__input" id="size-l" type="checkbox">
+                                            <label for="size-l" class="checkbox-text">L</label>
                                         </div>
-
                                     </div>
                                 </div>
 
-                            </details>
+                            </div>
                         </div>
 
                         <div class="sort-type">
-                            <details class="sort-block">
-                                <summary class="sort-title">PRICE <img class="arrow-bottom"
-                                        src="img/icon-arrow-bottom.svg" alt="arrow">
-                                </summary>
+                            <div class="flayout-container">
+                                <button class="flayout-btn">
+                                    <span>PRICE</span>
+                                    <svg class="arrow-bottom" width="11" height="6" viewBox="0 0 11 6" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                                            fill="#6F6E6E" />
+                                    </svg>
+                                </button>
 
-                                <div class="sort-block__price">
-                                    <div action="#" class="sort-block__filter sort-price">
+                                <div class="flayout-content">
+                                    <div class="sort-block__filter sort-price">
                                         <div class="sort-price-input__block">
-                                            <input class="sort-price-input price__min" type="text">
-                                            <span class="sort-price-input__dash">&minus;</span>
-                                            <input class="sort-price-input price__max" type="text">
+                                            <input class="sort-price-input price__min" type="text" placeholder="From">
+                                            <input class="sort-price-input price__max" type="text" placeholder="To">
                                         </div>
                                         <button class="sort-price-btn">OK</button>
                                     </div>
                                 </div>
 
-                            </details>
+                            </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="product-items">
+                </div>
+                <div class="product-items product-items__catalog">
                     <div class="product"><img src="img/product-1.png" alt="image">
                         <div class="overlay">
                             <button class="overlay-btn"><svg class="overlay-btn-img" width="26px" height="24px"

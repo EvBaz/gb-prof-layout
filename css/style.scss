@@ -40,6 +40,10 @@ body {
     margin: 0 auto;
 }
 
+.text {
+    margin: 0;
+}
+
 .header {
     background-color: #222;
     padding: 18px 0;
@@ -91,7 +95,7 @@ body {
 
 .breadcrump {
     @include flexSB();
-    height: 148px;
+    min-height: 148px;
     align-items: center;
 
     &-header {
@@ -131,7 +135,6 @@ body {
 }
 
 .promo-title {
-    // margin: -60px 99px 0 0;
     border-left: 12px solid $pink;
     padding-left: 16px;
 
@@ -250,6 +253,12 @@ body {
     &-link:hover {
         color: #0000FF;
     }
+}
+
+.product-items__catalog {
+    @include flexSB();
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .overlay {
@@ -492,7 +501,7 @@ body {
 .filter[open] {
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     background-color: #FFFFFF;
     box-shadow: $box-shadow;
     color: #6F6E6E;
@@ -501,7 +510,7 @@ body {
         fill: #EF5B70;
     }
 
-    .filter-header {
+    .filter-header-block {
         color: #EF5B70;
     }
 }
@@ -516,85 +525,95 @@ body {
     @include flexSB();
     padding: 13px 13px 0;
     width: 31.5%;
+    z-index: 1;
+}
 
-    &-block {
-        font-size: 14px;
-        font-weight: $font-weight400;
-        line-height: 17px;
-        color: #6F6E6E;
-        position: relative;
+.sort-block {
+    &__checkbox {
+        display: flex;
+    }
 
-        &__trend {
-            position: absolute;
-            background-color: #FFFFFF;
-            box-shadow: $box-shadow;
-            right: 0;
-            margin-top: 5px;
-        }
+    &__checkbox:not(:last-child) {
+        margin-bottom: 6px;
+    }
 
-        &__size {
-            position: absolute;
-            background-color: #FFFFFF;
-            box-shadow: $box-shadow;
-            right: 0;
-            margin-top: 5px;
-        }
+    &__input {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
-        &__price {
-            position: absolute;
-            background-color: #FFFFFF;
-            box-shadow: $box-shadow;
-            right: 0;
-            margin-top: 5px;
-        }
+    &__filter {
+        @include flexColumn();
+        border-style: none;
+    }
+}
 
-        &__filter {
-            @include flexColumn();
-            padding: 7px 20px 9px 9px;
-            border-style: none;
-        }
+.checkbox-text {
+    margin: 0;
+}
 
-        &__checkbox {
-            display: flex;
-            align-items: center;
-        }
+.sort-price {
 
-        &__checkbox:not(:last-child) {
-            margin-bottom: 6px;
-        }
+    &-input__block {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        &__input {
-            margin: 0;
+    &-input {
+        max-width: 70px;
+        border: 1px solid #6F6E6E;
+        padding: 5px;
+        text-align: center;
+    }
+
+    &-btn {
+        background-color: $pink;
+        border: 1px solid transparent;
+        color: white;
+        padding: 5px;
+        width: 100%;
+
+        &:hover {
+            background-color: white;
+            border: 1px solid $pink;
+            color: $pink;
+            transition: 0.4s;
         }
     }
 }
 
-.sort-price {
-    padding: 7px 9px 9px 9px;
+.sort-price-input::placeholder {
+    color: #6F6E6E;
+    opacity: 0.5;
+}
+
+.sort-qnt {
 
     &-input__block {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin-bottom: 10px;
     }
 
     &-input {
-        max-width: 50px;
-        border: 1px solid $pink;
-    }
-
-    &-input__dash {
-        color: $pink;
+        max-width: 70px;
+        border: 1px solid #6F6E6E;
+        padding: 5px;
+        text-align: center;
     }
 
     &-btn {
-        background-color: transparent;
-        border: 1px solid $pink;
-        color: $pink;
+        background-color: $pink;
+        border: 1px solid transparent;
+        color: white;
+        padding: 5px;
+        width: 100%;
 
         &:hover {
-            background-color: $pink;
-            color: white;
-            transition: 0.3s;
+            background-color: white;
+            border: 1px solid $pink;
+            color: $pink;
+            transition: 0.4s;
         }
     }
 }
@@ -776,8 +795,9 @@ body {
 
     &-sort {
         @include flexSB();
-        width: 60%;
+        width: 64%;
         margin: 65px 0 48px;
+        padding: 0;
     }
 
     &-btn {
@@ -1154,6 +1174,38 @@ summary::-webkit-details-marker {
     }
 }
 
+.flayout-container {
+    position: relative;
+    font-size: 14px;
+    font-weight: $font-weight400;
+    line-height: 17px;
+    color: #6F6E6E;
+}
+
+.flayout-btn {
+    background-color: transparent;
+    border: none;
+    color: #6F6E6E;
+    font-size: 14px;
+    padding: 0 0 5px;
+}
+
+.flayout-content {
+    padding: 7px 9px 11px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: $box-shadow;
+}
+
+.flayout-container:hover .flayout-content {
+    display: block;
+    right: 0;
+}
+
 @media (max-width: 1180px) {
     .center {
         padding: 0 calc(50% - 768px / 2);
@@ -1179,6 +1231,36 @@ summary::-webkit-details-marker {
 
     .offer-item-4 {
         height: 140px;
+    }
+
+    .product-items__catalog .product:last-child {
+        display: none;
+    }
+
+    .catalog-products {
+        margin: 24px 0 64px;
+    }
+
+    .catalog-header {
+        justify-content: flex-end;
+        margin-bottom: 40px;
+    }
+
+    .sort {
+        width: unset;
+        padding: unset;
+    }
+
+    .filter {
+        padding: unset;
+    }
+
+    .sort-type:not(:last-child) {
+        margin-right: 28px;
+    }
+
+    .catalog-pagination {
+        margin-top: 23px;
     }
 }
 
@@ -1326,7 +1408,7 @@ summary::-webkit-details-marker {
     }
 
     .products {
-        margin-top: 64px;
+        margin-top: 26px;
     }
 
     .product-items {
@@ -1348,5 +1430,52 @@ summary::-webkit-details-marker {
 
     .copyright {
         margin: 0;
+    }
+
+    .breadcrump {
+        flex-direction: column;
+        justify-content: unset;
+
+        &-header-block {
+            margin-top: 24px;
+        }
+
+        &-header-block p {
+            margin: 0;
+        }
+
+        &-paths {
+            margin: 32px 0 46px;
+        }
+
+        &-paths-list {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .filter {
+
+        &-header {
+            display: none;
+        }
+
+        &-icon {
+            width: 38px;
+            height: 25px;
+            margin-left: 16px;
+        }
+    }
+
+    .sort-type:not(:last-child) {
+        margin-right: 24px;
+    }
+
+    .flayout-btn {
+        font-size: 12px;
+    }
+
+    .catalog-header {
+        padding: 0 16px;
     }
 }
