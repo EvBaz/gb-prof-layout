@@ -9,10 +9,14 @@ $box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 @mixin inputField {
     border: 1px solid #A4A4A4;
     padding: 13px 0 16px 17px;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 16px;
-    color: #B1B1B1;
+    font-size: 16px;
+
+    &::placeholder {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: #B1B1B1;
+    }
 }
 
 @mixin flexColumn {
@@ -287,6 +291,11 @@ body {
         font-weight: $font-weight400;
         color: #FFFFFF;
 
+        &-img {
+            padding: 11px;
+            fill: #FFFFFF;
+        }
+
         &:hover {
             color: $pink;
             background-color: #FFFFFF;
@@ -297,11 +306,6 @@ body {
                 transition: 0.3s;
             }
         }
-    }
-
-    &-btn-img {
-        padding: 11px;
-        fill: #FFFFFF;
     }
 }
 
@@ -1104,7 +1108,7 @@ summary::-webkit-details-marker {
 
         &-pass-req {
             margin: 0;
-            font-weight: 300;
+            font-weight: $font-weight300;
             font-size: 13px;
             line-height: 16px;
             color: #B1B1B1;
@@ -1113,7 +1117,7 @@ summary::-webkit-details-marker {
         &-gender {
             display: flex;
             flex-direction: row;
-            font-weight: 300;
+            font-weight: $font-weight300;
             font-size: 11px;
             line-height: 13px;
             align-items: center;
@@ -1129,12 +1133,12 @@ summary::-webkit-details-marker {
         }
 
         &-btn {
+            border: 1px solid transparent;
             margin: 0;
             background-color: $pink;
             color: white;
-            border: none;
             padding: 16px 29px;
-            font-weight: 300;
+            font-weight: $font-weight300;
             font-size: 16px;
             line-height: 19px;
 
@@ -1167,7 +1171,7 @@ summary::-webkit-details-marker {
     }
 
     &-perks {
-        font-weight: 300;
+        font-weight: $font-weight300;
         font-size: 24px;
         line-height: 29px;
         max-width: 57%;
