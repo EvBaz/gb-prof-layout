@@ -355,12 +355,18 @@ body {
     height: 49px;
     background-color: #E1E1E1;
     opacity: 0.67;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 17px;
     border: none;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-left: 22px;
+    color: black;
+}
+
+.email-input::placeholder {
+    color: #4D4D4D;
+    opacity: 0.5;
 }
 
 .button-subscribe {
@@ -1087,6 +1093,8 @@ summary::-webkit-details-marker {
         &-input {
             @include inputField();
             margin-bottom: 20px;
+            font-weight: $font-weight400;
+            color: black;
         }
 
         &-input__pass {
@@ -1147,6 +1155,11 @@ summary::-webkit-details-marker {
                 }
             }
         }
+    }
+
+    .reg-form-input::placeholder {
+        color: #B1B1B1;
+        opacity: 0.5;
     }
 
     .login-block {
@@ -1326,6 +1339,20 @@ summary::-webkit-details-marker {
 
     .purchase-btns .purchase-btn:first-child {
         margin-right: 48px;
+    }
+
+    .reg {
+
+        &-form {
+            max-width: unset;
+            margin-right: 22px;
+        }
+
+        &-perks {
+            font-size: 16px;
+            line-height: 19px;
+            max-width: 354px;
+        }
     }
 }
 
@@ -1596,7 +1623,7 @@ summary::-webkit-details-marker {
         padding: 0 16px;
     }
 
-    .breadcrump-cart {
+    .breadcrump-center375 {
         justify-content: center;
     }
 
@@ -1670,5 +1697,16 @@ summary::-webkit-details-marker {
 
     .purchase-btns .purchase-btn:first-child {
         margin-right: 9px;
+    }
+
+    .reg {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+        margin: 40px 0 100px;
+
+        &-form {
+            margin: 0 0 40px;
+        }
     }
 }

@@ -437,12 +437,33 @@ body {
   height: 49px;
   background-color: #E1E1E1;
   opacity: 0.67;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   border: none;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding-left: 22px;
+  color: black;
+}
+
+.email-input::-webkit-input-placeholder {
+  color: #4D4D4D;
+  opacity: 0.5;
+}
+
+.email-input:-ms-input-placeholder {
+  color: #4D4D4D;
+  opacity: 0.5;
+}
+
+.email-input::-ms-input-placeholder {
+  color: #4D4D4D;
+  opacity: 0.5;
+}
+
+.email-input::placeholder {
+  color: #4D4D4D;
+  opacity: 0.5;
 }
 
 .button-subscribe {
@@ -1346,6 +1367,8 @@ summary::-webkit-details-marker {
   line-height: 16px;
   color: #B1B1B1;
   margin-bottom: 20px;
+  font-weight: 400;
+  color: black;
 }
 
 .reg-form-input__pass {
@@ -1419,6 +1442,26 @@ summary::-webkit-details-marker {
   fill: #F16D7F;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.reg .reg-form-input::-webkit-input-placeholder {
+  color: #B1B1B1;
+  opacity: 0.5;
+}
+
+.reg .reg-form-input:-ms-input-placeholder {
+  color: #B1B1B1;
+  opacity: 0.5;
+}
+
+.reg .reg-form-input::-ms-input-placeholder {
+  color: #B1B1B1;
+  opacity: 0.5;
+}
+
+.reg .reg-form-input::placeholder {
+  color: #B1B1B1;
+  opacity: 0.5;
 }
 
 .reg .login-block {
@@ -1583,6 +1626,15 @@ summary::-webkit-details-marker {
   }
   .purchase-btns .purchase-btn:first-child {
     margin-right: 48px;
+  }
+  .reg-form {
+    max-width: unset;
+    margin-right: 22px;
+  }
+  .reg-perks {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 354px;
   }
 }
 
@@ -1818,7 +1870,7 @@ summary::-webkit-details-marker {
   .catalog-header {
     padding: 0 16px;
   }
-  .breadcrump-cart {
+  .breadcrump-center375 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1881,6 +1933,20 @@ summary::-webkit-details-marker {
   }
   .purchase-btns .purchase-btn:first-child {
     margin-right: 9px;
+  }
+  .reg {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 16px;
+    margin: 40px 0 100px;
+  }
+  .reg-form {
+    margin: 0 0 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
