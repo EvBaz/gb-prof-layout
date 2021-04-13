@@ -201,6 +201,17 @@ body {
   font-weight: 300;
 }
 
+.breadcrump-paths-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.breadcrump-paths-list__item {
+  list-style: none;
+}
+
 .current-location {
   font-weight: 700;
   color: #F16D7F;

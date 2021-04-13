@@ -187,6 +187,15 @@ body {
         color: #636363;
         font-weight: $font-weight300;
     }
+
+    &-paths-list {
+        display: flex;
+        padding: 0;
+    }
+
+    &-paths-list__item {
+        list-style: none;
+    }
 }
 
 .current-location {
