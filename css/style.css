@@ -563,6 +563,12 @@ body {
   opacity: 0.5;
 }
 
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .button-subscribe {
   width: 100px;
   height: 49px;
@@ -1520,6 +1526,7 @@ summary::-webkit-details-marker {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
+  border: 1px solid transparent;
 }
 
 .reg-form-btn__img {
