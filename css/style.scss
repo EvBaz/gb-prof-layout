@@ -333,12 +333,18 @@ body {
     }
     
     &-link {
-        text-decoration: none;
         color: #222;
+        text-decoration: none;
+        background-image: linear-gradient(currentColor,     currentColor);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.4s;
     }
     
     &-link:hover {
-        color: #0000FF;
+        color: $pink;
+        background-size: 100% 2px;
     }
 }
 
@@ -807,10 +813,6 @@ body {
         width: 47px;
         background-color: rgba(42, 42, 42, 0.15);
     }
-}
-
-.product-link:hover {
-    color: $pink;
 }
 
 .slider-btn-left {
@@ -1854,3 +1856,4 @@ summary::-webkit-details-marker {
         right: calc(44% - 1140px / 2);
     }
 }
+
