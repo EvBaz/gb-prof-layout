@@ -393,12 +393,20 @@ body {
 }
 
 .product-link {
-  text-decoration: none;
   color: #222;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size 0.4s;
+  transition: background-size 0.4s;
 }
 
 .product-link:hover {
-  color: #0000FF;
+  color: #F16D7F;
+  background-size: 100% 2px;
 }
 
 .product-items__catalog {
@@ -997,10 +1005,6 @@ body {
   height: 47px;
   width: 47px;
   background-color: rgba(42, 42, 42, 0.15);
-}
-
-.product-link:hover {
-  color: #F16D7F;
 }
 
 .slider-btn-left {
